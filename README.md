@@ -1,5 +1,3 @@
-Sure, here's a basic README file for your Ballot contract:
-
 # Ballot Contract
 
 This contract is a simple ballot that allows a single chairperson to give voting rights to other Ethereum addresses, who can then vote on a set of proposals. The winning proposal is determined by a simple majority vote. The contract is based on the [OpenZeppelin](https://openzeppelin.com/) Pausable and Ownable contracts.
