@@ -18,6 +18,12 @@ describe("Ballot Contract", async function () {
     [chairperson, voter1, voter2,voter3,voter4] = await ethers.getSigners();
   });
 
+  it("if there is not vote should return empty string ", async function () {
+    const notVotedProposal = await ballotFactory.connect(chairperson).winningName();
+  
+    expect(notVotedProposal).to.equal("");
+  });
+  
   it("should create a new ballot with correct proposals", async function () {
     expect(
       ballotFactory.proposals(0),
@@ -77,5 +83,6 @@ describe("Ballot Contract", async function () {
       ballotFactory.connect(voter4).vote(1)
     ).to.be.revertedWith("Has no right to vote");
   });
+  
   
 });

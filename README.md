@@ -1,3 +1,16 @@
+## Getting Started
+
+To get started with this project, follow these steps:
+
+1. Run `npm i` to install the necessary dependencies.
+2. Create a new `.env` file in the same directory as the JSON files, and add `PRIVATE_KEY=` followed by your own private key.
+3. Run `npx hardhat deploy` to deploy the contracts.
+4. Run `npx hardhat test` to run the test suite.
+
+Note: Before running the tests, make sure to update the test suite with your own contract addresses and other relevant information.
+
+We hope this helps you get started with the project. If you have any questions or issues, please feel free to reach out to us.
+
 # Ballot Contract
 
 This contract is a simple ballot that allows a single chairperson to give voting rights to other Ethereum addresses, who can then vote on a set of proposals. The winning proposal is determined by a simple majority vote. The contract is based on the [OpenZeppelin](https://openzeppelin.com/) Pausable and Ownable contracts.
